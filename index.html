@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MineServ Mini App</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      background: #1e1e1e;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello from MineServ</h1>
+  <p>This is running inside Telegram!</p>
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand(); // Make full screen
+    tg.MainButton.setText("Open MineServ");
+    tg.MainButton.show();
+    tg.MainButton.onClick(() => {
+      tg.sendData("open_mineserv");
+    });
+  </script>
+</body>
+</html>
